@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Brand Name Generator</title>
+    </head>
+
+    <body>
+
+        <% if(locals.Adjective && locals.Noun){ %>
+            <h1>
+                <%= Adjective %>
+                    <%= Noun %>
+            </h1>
+            <% }else{ %>
+                <h1>Welcome to random name Generate🤘</h1>
+                <% }%>
+
+                    <form action="/submit" method="POST">
+                        <input type="submit" value="Generate Name">
+                    </form>
+    </body>
+
+    </html>
+    <%- include("partials/footer.ejs") %>
